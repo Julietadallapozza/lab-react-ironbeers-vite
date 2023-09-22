@@ -1,9 +1,16 @@
-import "./App.css";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import AddBeerPage from "./pages/AddBeerPage";
 
 function App() {
   return (
     <div className="App">
-      <h1>LAB | React IronBeers</h1>
+      <Navbar />
+      <Routes>
+        <Route path="navbar" element={<Navbar />} />
+        <Route path="addBeer" element={<AddBeerPage />} />
+      </Routes>
     </div>
   );
 }
